@@ -19,7 +19,7 @@ nmap = subprocess.run(['nmap', '-sV', '-oN', 'out.txt', URL])
 universal_newlines = True
 stdout = subprocess.PIPE
 
-path_to_file='/home/doodle/out.txt'
+path_to_file='/home/usr/out.txt'
 with open(path_to_file,'r') as file:
 	lines = (file.readlines())
 	for line in lines:
@@ -28,7 +28,7 @@ with open(path_to_file,'r') as file:
 			subprocess.run(['gobuster', 'dir', '-u', URL, '-w', word])
 			print('done')
 
-path_to_file='/home/doodle/out.txt'
+path_to_file='/home/usr/out.txt'
 with open(path_to_file,'r') as file:
 	lines = (file.readlines())
 	for line in lines:
